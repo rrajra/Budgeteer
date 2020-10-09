@@ -1,0 +1,71 @@
+body {
+	background-color: #1E242B;
+	font-family: Lato;
+	font-size: 1.5rem;
+}
+* {
+	padding: 0;
+	margin: 0;
+}
+p {
+	color: white;
+	align-content: center;
+	justify-content: center;
+	content: center;
+	display: flex;
+	cursor: default;
+}
+header {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-start;
+	background-color: #eee;
+	align-self: stretch;
+	-webkit-app-region: drag;
+	position: fixed;
+	width: 100%;
+}
+#content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.closee {
+	padding: 5px 15px 5px 15px;
+	-webkit-app-region: no-drag;
+	cursor: default;
+	user-select: none;
+}
+.closee:hover {
+	background-color: crimson ;
+}
+.closee:active {
+	background-color: darkred;
+}
+.minimizee {
+	user-select: none;
+}
+.minimizee:hover {
+	background-color: darkgrey;
+}
+.minimizee:active {
+	background-color: black;
+}
+.minimizee {
+	padding: 5px 15px 5px 15px;
+	-webkit-app-region: no-drag;
+	cursor: default;
+}
+.Months {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: wrap;
+}
+.individMonth {
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-bottom: 45px;
+	margin-top: 45px;
+	min-width: 406px;
+	min-height: 60px;
+}

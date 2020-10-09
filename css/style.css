@@ -1,0 +1,266 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+p {
+	color: white;
+	align-content: center;
+	justify-content: center;
+	content: center;
+	display: flex;
+	cursor: default;
+}
+header {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-start;
+	background-color: #eee;
+	align-self: stretch;
+	-webkit-app-region: drag;
+}
+h1 {
+	color: white;
+	content: center;
+	justify-content: center;
+	text-align: center;
+	cursor: default;
+}
+body {
+	background-color: #1E242B;
+	font-family: Lato;
+	font-size: 1.5rem;
+	overflow: hidden;
+}
+button {
+	background-color: #008CBA;
+	cursor: pointer;
+	border-radius: 35px;
+	font-family: Lato;
+	color: white;
+	padding: 15px 32px;
+	padding-bottom: 20px;
+	text-decoration: none;
+	border: none;
+	font-size: 1.2rem;
+	outline: none;
+}
+button:active {
+	background-color: #1181a6;
+}
+input {
+	text-decoration: none;
+	outline: none;
+	border-radius: 15px;
+	width: 210px;
+	height: 60px;
+	font-family: Lato;
+	font-size: 2rem;
+	text-align: center;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+ 
+input[type=number]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+.inputs {
+	font-size: 1.3rem;
+	display: flex;
+	text-align: center;
+	content: center;
+	align-content: center;
+	justify-content: center;
+}
+.inputs p {
+	cursor: default;
+	padding-bottom: 15px;
+	user-select: none;
+	padding-top: 5%;
+}
+.introTxt {
+	padding-bottom: 10px;
+	padding-top: 25px;
+	user-select: none;
+}
+.introCont {
+	padding-top: 20%;
+}
+.monthIncome {
+	display: block;
+}
+.monthAllowance {
+	display: none;
+}
+.leftSide {
+	flex-direction: column;
+	width: 50%;
+	padding-top: 8%;
+}
+.leftSide p {
+
+}
+.monthBills {
+	display: none;
+}
+.closee {
+	padding: 5px 15px 5px 15px;
+	-webkit-app-region: no-drag;
+	cursor: default;
+	user-select: none;
+}
+.closee:hover {
+	background-color: crimson ;
+}
+.closee:active {
+	background-color: darkred;
+}
+.minimizee {
+	user-select: none;
+}
+.minimizee:hover {
+	background-color: darkgrey;
+}
+.minimizee:active {
+	background-color: black;
+}
+.minimizee {
+	padding: 5px 15px 5px 15px;
+	-webkit-app-region: no-drag;
+	cursor: default;
+}
+.titleText {
+	font-size: 0.8em;
+	text-align: left;
+	align-items: flex-start;
+	justify-content: flex-end;
+}
+.mainMenu input {
+	height: 30px;
+	width: 105px;
+}
+.continueBtn {
+	display: flex;
+	text-align: center;
+	content: center;
+	align-content: center;
+	justify-content: center;
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+}
+.backBtn {
+	display: none;
+	text-align: center;
+	content: center;
+	align-content: center;
+	justify-content: center;
+	margin-top: 15px;
+	bottom: 0;
+	left: 0;
+}
+.mainMenu {
+	display: none;
+	text-align: left;
+	flex-direction: row;
+	align-content: flex-start;
+	justify-content: flex-start;
+	width: 100%;
+	padding: 15px;
+	padding-top: 25px;
+	margin: 8;
+}
+.mainMenu p {
+	padding: 15px;
+}
+#content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.option {
+	-webkit-app-region: no-drag;
+	padding: 10px 25px;
+	cursor: default;
+}
+#invalidNum {
+	display: none;
+	color: red;
+	user-select: none;
+}
+.buttonBar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 25px;
+}
+.buttonBar button {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.canvas {
+	height: 40%;
+	width: 40%;
+	flex-direction: row;
+}
+.option:hover {
+	background: red;
+}
+.credits {
+	bottom: 5px;
+	position: absolute;
+	left: 15px;
+	font-size: 0.7em;
+}
+.credits a {
+	color: #008CBA;
+	text-decoration: none;
+	margin-left: 4px;
+}
+#displayInc:hover {
+
+}
+#displayAllow:hover {
+}
+#displayBills:hover {
+}
+#inputInc {
+	display: none;
+	text-align:center;
+}
+#inputAlow {
+	display: none;
+	text-align:center;
+}
+#inputBil {
+	display: none;
+	text-align:center;
+}
+#mIncText {
+	display: none;
+}
+#mAlowText {
+	display: none;
+}
+#mBilText {
+	display: none;
+}

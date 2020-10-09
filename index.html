@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Budgetr</title>
+  </head>
+  <body>
+    <div id="content">
+      <header>
+        <div class="closee" id="close">X</div>
+        <div class="minimizee" id="minimize">_</div>
+      </header>
+    </div>
+    <div class="introCont" id="introPaddingHide">
+    <p class="introTxt" id="introText">Looks like you dont have a budget yet, lets get you started</p>
+    <p id="invalidNum">Please enter a valid number</p>
+  <div class="inputs">
+    <div class="monthIncome" id="minc">
+      <p>Please enter your monthly income</p>
+      <input type="number" min="0" id="mIncome" name="mIncome">
+    </div>
+    <div class="monthAllowance" id="mal">
+      <p>Please enter your monthly allowance</p>
+      <input type="number" min="0" id="mAllowance" name="mAllowance" required>
+    </div>
+    <div class="monthBills" id="mbi">
+      <p>Please enter your monthly bill costs</p>
+      <input type="number" min="0" id="mBills" name="mBills" required>
+    </div>
+  </div>
+  </div>
+  <div class="continueBtn">
+    <button type="button" id="continue">Continue</button>
+  </div>
+  <div class="backBtn" id="back">
+    <button type="button">Back</button>
+  </div>
+  <div class="credits">
+    <p>Chart powered by       <a href="https://canvasjs.com/">ChartJS</a>.</p>
+  </div>
+
+  <div class="mainMenu" id="mainmenu">
+    <div class="leftSide" id="lS">
+    <h1 id="userName">Welcome, $user</h1>
+    <p id="displayInc">Your monthly income is:</p>
+    <p id="mIncText">Your monthly income is:<input type="number" min="0" id="inputInc" name="inputInc" required></p>
+    <p id="displayAllow">Your monthly allowance is:</p>
+    <p id="mAlowText">Your monthly allowance is:<input type="number" min="0" id="inputAlow" name="inputAlow" required></p>
+    <p id="displayBills">Your monthly bill costs are:</p>
+    <p id="mBilText">Your monthly bill costs are:<input type="number" min="0" id="inputBil" name="inputBil" required></p>
+    <div class="buttonBar">
+      <button id="viewPast">View Past Info</button>
+      <button id="editInfo" value="Edit Info">Edit Info</button>
+    </div>
+    </div>
+    <div class="canvas">
+      <canvas id="myChart" width="100" height="100"></canvas>
+    </div>
+  </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="codeScript.js"></script>
+    <script src="./renderer.js"></script>
+    <script src="node_modules/chart.js/dist/Chart.js"></script>
+    <!-- <script src="menuHandler.js"></script> -->
+  </body>
+</html>
