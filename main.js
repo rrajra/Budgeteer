@@ -5,7 +5,9 @@ const jetpack = require('fs-jetpack');
 const { exists } = require('fs-jetpack');
 const { fstat, appendFileSync, fsync } = require('fs');
 const { parseJSON } = require('jquery');
-import "fontsource-lato";
+const { autoUpdater } = require('electron-updater');
+const ipcMain = require('electron').ipcMain;
+
 
 var yesno;
 var img_dir = '/images/';
@@ -39,6 +41,10 @@ function createWindow () {0
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
+
+  mainWindow.once('ready-to-show', () => {
+    autoUpdater.checkForUpdatesAndNotify();
+  });
 }
 
 function readFile() {
@@ -93,3 +99,12 @@ app.on('window-all-closed', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+autoUpdater.on('update-available', () => {
+  mainWindow.webContents.send('update_available');
+});
+autoUpdater.on('update-downloaded', () => {
+  mainWindow.webContents.send('update_downloaded');
+});
+ipcMain.on('restart_app', () => {
+  autoUpdater.quitAndInstall();
+});

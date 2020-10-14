@@ -19,6 +19,7 @@ document.addEventListener('keypress', function (e) {
 document.getElementById('back').addEventListener('click', backMove);
 document.getElementById('editInfo').addEventListener('click', editBtnInfo);
 document.getElementById('viewPast').addEventListener('click', viewHistory);
+document.getElementById('source').addEventListener('click', linkPage);
 
 var warning = document.getElementById('invalidNum');
 var income = document.getElementById('minc');
@@ -42,6 +43,10 @@ var isEditing = false;
 document.addEventListener('DOMContentLoaded', (event) => {
     lookForFile();    
 })
+
+function linkPage() {
+    require('electron').shell.openExternal('https://canvasjs.com/');
+}
 
 function closeWindow() {
     var window = remote.getCurrentWindow()
@@ -384,6 +389,28 @@ function nextMove() {
         //This writes out the monthly history
         jetpack.write('months//monthlyData.json', saveMonthly);
     }
+//For autoupdate 
+    const notification = document.getElementById('notification');
+    const message = document.getElementById('message');
+    const restartButton = document.getElementById('restart-button');
+    ipcRenderer.on('update_available', () => {
+  ipcRenderer.removeAllListeners('update_available');
+  message.innerText = 'A new update is available. Downloading now...';
+  notification.classList.remove('hidden');
+});
+ipcRenderer.on('update_downloaded', () => {
+  ipcRenderer.removeAllListeners('update_downloaded');
+  message.innerText = 'Update Downloaded. It will be installed on restart. Restart now?';
+  restartButton.classList.remove('hidden');
+  notification.classList.remove('hidden');
+});
+function closeNotification() {
+  notification.classList.add('hidden');
+}
+function restartApp() {
+  ipcRenderer.send('restart_app');
+}
+
 
 
     function makeGraph () {
