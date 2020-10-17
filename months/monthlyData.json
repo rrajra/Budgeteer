@@ -1,11 +1,6 @@
-[{
-	"month": 8,
-	"income": "3500",
-	"allowance": "2500",
-	"bills": "15"
-}, {
-	"month": 9,
-	"income": "3500",
-	"allowance": "2500",
-	"bills": "15"
-}]
+{
+  "month": 9,
+  "income": "500",
+  "allowance": "55",
+  "bills": "150"
+}

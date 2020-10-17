@@ -26,6 +26,8 @@ var income = document.getElementById('minc');
 var allowance = document.getElementById('mal');
 var bills = document.getElementById('mbi');
 var backBtn = document.getElementById('back');
+var needToDelete = false;
+var myChart;
 var currency = "$";
 
 var currentDate = new Date();
@@ -413,9 +415,11 @@ function restartApp() {
 
 
 
-    function makeGraph () {
+function makeGraph () {
+    console.log(needToDelete);
+    if(needToDelete == false) {
     var ctx = document.getElementById('myChart');
-    var myChart = new Chart(ctx, {
+    myChart = new Chart(ctx, {
     type: 'pie',
     data: {
         labels: ['Income', 'Allowance', 'Bills', 'Savings'],
@@ -441,5 +445,14 @@ function restartApp() {
             borderWidth: 1
         }]
     },
-});
+}); 
+needToDelete = true; 
+} 
+    else 
+    { 
+    console.log("destroying chart"); 
+    myChart.destroy(); 
+    needToDelete = false; 
+    makeGraph(); 
+    } 
 }

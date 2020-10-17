@@ -11,6 +11,9 @@ var incomeInt = 5;
 var allowanceInt = 5;
 var billsInt = 4;
 var savings = 515;
+var needToDelete = false;
+var myChart;
+
 
 //Since January is starting date, load data from that 1st.
 window.onload = function(){
@@ -146,8 +149,10 @@ $('.ulClass li').on('click', function () {
 
 //Makes the graph
 function makeGraph () {
+    console.log(needToDelete);
+    if(needToDelete == false) {
     var ctx = document.getElementById('myChart');
-    var myChart = new Chart(ctx, {
+    myChart = new Chart(ctx, {
     type: 'pie',
     data: {
         labels: ['Income', 'Allowance', 'Bills', 'Savings'],
@@ -173,5 +178,14 @@ function makeGraph () {
             borderWidth: 1
         }]
     },
-});
+}); 
+needToDelete = true; 
+} 
+    else 
+    { 
+    console.log("destroying chart"); 
+    myChart.destroy(); 
+    needToDelete = false; 
+    makeGraph(); 
+    } 
 }
