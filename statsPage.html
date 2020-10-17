@@ -16,11 +16,37 @@
       </header>
     </div>
 
-
+<div class="Everything">
       <div class="monthList" id="monthSelector">
-        <p id="displayedMonth">Janurary</p>
+        <p id="displayedMonth">January</p>
+        <div class="hiddenMonths" id="hideMonths">
+        <ul id="uList" class="ulClass">
+          <li id="Jan">January</li>
+          <li id="Feb">February</li>
+          <li id="Mar">March</li>
+          <li id="Apr">April</li>
+          <li id="May">May</li>
+          <li id="Jun">June</li>
+          <li id="Jul">July</li>
+          <li id="Aug">August</li>
+          <li id="Sep">September</li>
+          <li id="Oct">October</li>
+          <li id="Nov">November</li>
+          <li id="Dec">December</li>
+        </ul>
+        </div>
       </div>
+        <div class="Stats">
+          <p id="income">No info available.</p>
+          <p id="allowance">No info available.</p>
+          <p id="bills">No info available.</p>
+        </div>
 
+        <div class="canvas">
+          <canvas id="myChart" width="100" height="100"></canvas>
+        </div>
+      </div>
+<!----
       <div class="Months">
       <div class="individMonth">
         <p>January</p>
@@ -71,8 +97,11 @@
                     <p id="DecData">No data found.</p>
                     </div>
         </div>
+      -->
 
 
    </body>
    <script src="menuHandler.js"></script>
    <script src="loadPreviousData.js"></script>
+   <script src="stats.js"></script>
+   <script src="node_modules/chart.js/dist/Chart.js"></script>
