@@ -1,11 +1,12 @@
 # Budgeteer 💸
 
 An easy way to keep track of and manage finances.
-Combines HTML, CSS, and JavaScript elements while using electron framework.
+Combines HTML, CSS, and JavaScript elements built using the [electron framework](https://www.electronjs.org/).
+
+A direct link to the download can be found at https://abrahams.dev.
 
 ## Get Started 🔰
 ### Easy 🟢
-A direct link to the download can be found at https://abrahams.dev.
 Budgeteer is designed to run out of the box. To run, unzip Budgeteer.zip, and then run Budgeteer.exe.
 
 ## Features 📃
