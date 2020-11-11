@@ -16,4 +16,5 @@ Budgeteer is designed to run out of the box. To run, unzip Budgeteer.zip, and th
 * ... And More!
 
 ## Screenshots 📸
+![Gif of monthly data](https://thumbs.gfycat.com/MenacingFrighteningFrog-size_restricted.gif)
 ![Image of Main Screen](https://abrahams.dev/images/gallery/budgteermain.png)
