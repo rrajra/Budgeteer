@@ -1,2 +1,5 @@
 node_modules
 electron-builder.yml
+months/monthlyData.json
+months/bu
+data.json
